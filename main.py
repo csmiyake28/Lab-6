@@ -13,18 +13,26 @@ def encode(password):
     return encoded_pass
 
 #Placeholder for team member
+#This is the decode function
 def decode(encoded_password):
-    pass
+    decoded_pass = ""
+    for char in encoded_password:
+        char = int(char) - 3 #Subtracts 3 characters from entered digits
+        decoded_pass += str(char)
+        #Returns new pass
+
+
+    return decoded_pass
 
 
 
 Continue = True
 #While loop
 while Continue:
-    print('Menu \n------------- \
+    print('\nMenu \n------------- \
             \n1. Encode  \
             \n2. Decode \
-            \n3. Quit ')
+            \n3. Quit \n')
 
     option = int(input('Please enter an option: '))
 
@@ -37,9 +45,11 @@ while Continue:
 
         pass
     if option ==2:
+        original_pass = decode(encoded_password) #Sets original_pass to decoded version of the encoded password
+        print(f'The encoded password is {encoded_password}, and the original password is {original_pass}.') #string allows looped function
         pass
     if option == 3:
-        Continue = False
+        Continue = False #Stops loop
 
 
 
