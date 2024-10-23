@@ -17,7 +17,6 @@ def decode(encoded_password):
 
 
 
-
 Continue = True
 #While loop
 while Continue:
@@ -32,6 +31,8 @@ while Continue:
         password = input('Enter your password to encode: ')
         # here you encode your password and store it!
         encoded_password = encode(password)
+        print('Your password has been encoded and stored!')
+
 
         pass
     if option ==2:
